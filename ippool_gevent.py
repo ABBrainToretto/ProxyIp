@@ -104,7 +104,7 @@ if __name__ == '__main__':
     MVP = IsActivePorxyIP()
     proxy_ip_list = MVP.ip_list.ip_pool(1,4)
 
-    #异步并发
+    #异步并发调用
     pool = Pool(20)
     pool.map(MVP.ip_examine,proxy_ip_list)
 
