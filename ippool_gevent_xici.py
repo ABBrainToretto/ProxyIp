@@ -99,7 +99,7 @@ class IsActivePorxyIP(object):
 
 
 
-##-------封装模块，以便以后调用---------##
+##-------封装模块，以便以后调用----------##
 if __name__ == '__main__':
     MVP = IsActivePorxyIP()
     proxy_ip_list = MVP.ip_list.ip_pool(1,4)
