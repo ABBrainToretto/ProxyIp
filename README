@@ -6,5 +6,7 @@
 ippool.py不仅修复了proxyip.py的无法长时间保存的缺陷，而且所有存入数据库的ip都是通过百度网或者美团网等大型网站验证过的，且封装成字典类型，方便useip.py直接调用
 useip.py从数据库调用代理Ip，且每运行一次只调用一个代理IP，为了满足requests的proxies需求。
 
-<<<第二版ip池>>>升级版：
-增加gevent异步并发验证ip的有效性，简直就是打开了新世界的大门啊
+<<<第二版ip池>>>升级版：增加更多代理网站且异步验证
+ippool_gevent_xici.py 用xpath爬取西刺代理，并增加gevent异步并发验证ip的有效性
+ippool_gevent_kuaidaili.py 用beautifulsoup爬取快代理，并增加gevent异步并发验证ip的有效性
+manage_ippool.py 同时调度ippool_gevent_xici.py 和 ippool_gevent_kuaidaili.py 
